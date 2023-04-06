@@ -1,0 +1,63 @@
+* {
+    transition: .2s ease;
+}
+.LoadingTodo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    box-shadow: 0 5px 5px rgba(32, 35, 41, 0.124);
+    margin: 24px;
+    border-radius: 5px;
+}
+
+.LoadingTodo-text {
+    margin: 24px 0 24px 24px;
+    width: calc(100% - 120px);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.LoadingTodo-completeIcon,
+.LoadingTodo-deleteIcon {
+    height: 48px;
+    width: 48px;
+}
+
+.LoadingTodo-completeIcon {
+    position: absolute;
+    left: 12px;
+    border-radius: 100%;
+}
+
+.LoadingTodo-deleteIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 3px;
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+}
+
+.LoadingTodo-container,
+.LoadingTodo-completeIcon,
+.LoadingTodo-deleteIcon {
+    background: linear-gradient(90deg, rgba(250, 250, 250, .5), rgba(200, 199, 199, .5), rgba(250, 250, 250, .3), rgba(250, 250, 250, .3), rgba(250, 250, 250, .3));
+    background-size: 400% 400%;
+    animation: loadingAnimation 3s ease-in-out infinite;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
